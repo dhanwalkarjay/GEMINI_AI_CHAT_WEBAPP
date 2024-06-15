@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;800&family=Work+Sans&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #8AAAE5;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+
+.image-inverted {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.bottom-info {
+  font-size: 13px;
+  margin: 15px auto;
+  text-align: center;
+  font-weight: 300;
+}
+
+.fade-appear {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+@keyframes gradientMove {
+  from {
+    background-position: 0% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.sidebar-prompts {
+  background-color: red;
+}
+
+.recentprompt-title {
+  margin-bottom: -30px;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+
+}
+
+.homepage-hero-title {
+  font-size: 90px;
+  text-shadow: 19px 20px 20px black;
+}
+
+.homepage-hero {
+  color: #8AAAE5;
+  font-size: 90px;
+  text-shadow: 19px 20px 20px black;
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  opacity: 0;
+  animation: fadeInFromLeft 3s ease-in-out forwards;
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInRight {
+  opacity: 0;
+  animation: fadeInFromRight 3s ease-in-out forwards;
+}
+
+.nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 13px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+
+.input-placeholder::placeholder {
+  color: white;
+}
+
+.MuiOutlinedInput-input-root.Mui-focused,
+.MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* Define the keyframes for the zoom-in animation */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Define the keyframes for the fade-out animation */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none; 
+  }
+}
+
+.splash-screen {
+  animation: zoomIn 1s ease-in forwards, fadeOut 3s ease-out 2s forwards;
+}
